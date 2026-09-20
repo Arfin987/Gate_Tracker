@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GATE Progress Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+
+
+https://cdn.jsdelivr.net/npm/chart.jsscript>
+</head>
+<body>
+
+<header>
+<!--<h1>🚀 GATE Progress Dashboard</h1>
+    <button id="themeBtn">🌙 Dark Mode</button> -->
+
+    <div class="hero">
+  <div>
+      <h1>🎯 GATE 2027 Progress Dashboard</h1>
+      <p>Track Revisions • PYQs • DPPs • Mocks • Progress</p>
+      <button id="themeBtn">🌙 Dark Mode</button>
+  </div>
+</div>
+
+
+
+</header>
+
+<div class="stats">
+
+    <div class="card">
+        <h3>Overall Progress</h3>
+        <h1 id="progressPercent">0%</h1>
+    </div>
+
+    <div class="card">
+        <h3>Completed Tasks</h3>
+        <h1 id="completedCount">0</h1>
+    </div>
+
+    <div class="card">
+        <h3>Current Streak</h3>
+        <h1 id="streak">0</h1>
+    </div>
+
+    <div class="card">
+        <h3>Readiness Score</h3>
+        <h1 id="readiness">0%</h1>
+    </div>
+
+</div>
+
+<div class="exam-card">
+    <input type="date" id="examDate">
+    <button onclick="saveDate()">Save Exam Date</button>
+
+    <h2 id="countdown"></h2>
+</div>
+
+<div class="controls">
+
+    <input type="text"
+           id="search"
+           placeholder="Search chapter">
+
+    <button onclick="exportData()">
+        Export Backup
+    </button>
+
+    <input type="file"
+           id="importFile"
+           onchange="importData(event)">
+
+</div>
+
+<div class="chartBox">
+    <canvas id="subjectChart"></canvas>
+</div>
+
+<div class="chartBox">
+    <canvas id="overallChart"></canvas>
+</div>
+
+<div id="tracker"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
